@@ -1,0 +1,8 @@
+prefix=/home/jingjunliu/my_robot_1125/devel
+
+Name: my_robot_config
+Description: Description of my_robot_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/jingjunliu/my_robot_1125/devel/lib 
+Requires: 

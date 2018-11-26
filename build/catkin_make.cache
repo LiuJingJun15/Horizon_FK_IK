@@ -1,0 +1,2 @@
+fk_ik:my_robot:my_robot_config
+-DCATKIN_DEVEL_PREFIX=/home/jingjunliu/my_robot_1125/devel -DCMAKE_INSTALL_PREFIX=/home/jingjunliu/my_robot_1125/install -G Unix Makefiles

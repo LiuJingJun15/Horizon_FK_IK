@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: my_robot
+    relative_path: urdf/my_robot.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/my_robot.srdf
+  CONFIG:
+    author_name: Jingjun Liu
+    author_email: jliu798@wisc.edu
+    generated_timestamp: 1543188579

@@ -1,0 +1,9 @@
+controller_list:
+  - name: fake_horizon_arm_controller
+    joints:
+      - shoulder_joint_1
+      - shoulder_joint_2
+      - elbow_joint_1
+      - elbow_joint_2
+      - wrist_joint_1
+      - wrist_joint_2

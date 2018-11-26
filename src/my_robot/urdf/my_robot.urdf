@@ -1,0 +1,414 @@
+<robot
+  name="my_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000108155545611446 3.61850618061218E-20 0.0281626544211125"
+        rpy="0 0 0" />
+      <mass
+        value="1.72590934298716" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_link_1">
+    <inertial>
+      <origin
+        xyz="-0.000904424591346516 3.18163842303381E-18 0.0277766127330435"
+        rpy="0 0 0" />
+      <mass
+        value="0.515811703625434" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/shoulder_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/shoulder_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_1"
+    type="continuous">
+    <origin
+      xyz="0 -0.06 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="shoulder_link_2">
+    <inertial>
+      <origin
+        xyz="-4.11924479660903E-05 1.14990236991434E-09 0.184335333285585"
+        rpy="0 0 0" />
+      <mass
+        value="3.31798207209793" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/shoulder_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/shoulder_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.073025"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_1" />
+    <child
+      link="shoulder_link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="elbow_wrist_link_1">
+    <inertial>
+      <origin
+        xyz="-4.23500622255767E-05 9.16718749334957E-10 0.103843445993573"
+        rpy="0 0 0" />
+      <mass
+        value="2.04654987653461" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/elbow_wrist_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/elbow_wrist_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.381"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_2" />
+    <child
+      link="elbow_wrist_link_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="elbow_wrist_link_2">
+    <inertial>
+      <origin
+        xyz="-0.000210346471437168 4.8888217219936E-18 0.05718467004813"
+        rpy="0 0 0" />
+      <mass
+        value="0.974582547543277" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/elbow_wrist_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/elbow_wrist_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.1648"
+      rpy="0 0 0" />
+    <parent
+      link="elbow_wrist_link_1" />
+    <child
+      link="elbow_wrist_link_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wrist_claw_link">
+    <inertial>
+      <origin
+        xyz="-6.37423822544376E-05 6.91506204730463E-10 0.0529609263599481"
+        rpy="0 0 0" />
+      <mass
+        value="1.24881759325654" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/wrist_claw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/wrist_claw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.14"
+      rpy="0 0 0" />
+    <parent
+      link="elbow_wrist_link_2" />
+    <child
+      link="wrist_claw_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="claw">
+    <inertial>
+      <origin
+        xyz="-0.000285145021418853 8.94520518500382E-19 0.0272542084571059"
+        rpy="0 0 0" />
+      <mass
+        value="0.268869034728973" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/claw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/claw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.1278"
+      rpy="0 0 0" />
+    <parent
+      link="wrist_claw_link" />
+    <child
+      link="claw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="end_effector">
+    <inertial>
+      <origin
+        xyz="-1.23601605366189E-05 -8.72931417989447E-17 0.0185032766543226"
+        rpy="0 0 0" />
+      <mass
+        value="0.103154" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/end_effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/jingjunliu/my_robot_1125/src/my_robot/meshes/end_effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.05"
+      rpy="0 0 0" />
+    <parent
+      link="claw" />
+    <child
+      link="end_effector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

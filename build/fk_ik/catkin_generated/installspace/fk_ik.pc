@@ -1,0 +1,8 @@
+prefix=/home/jingjunliu/my_robot_1125/install
+
+Name: fk_ik
+Description: Description of fk_ik
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jingjunliu/my_robot_1125/install/lib 
+Requires: 
